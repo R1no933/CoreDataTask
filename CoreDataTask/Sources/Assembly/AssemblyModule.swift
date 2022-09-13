@@ -12,10 +12,12 @@ protocol AssemblyModuleType {
     var storage: StorageType { get }
     
     func createUsersModule(router: UsersRouter) -> UIViewController
+    func createDeatilModule(router: UsersRouter, user: User?) -> UIViewController
 }
 
 //MARK: - Class
 class AssemblyModule: AssemblyModuleType {
+    
     //Properrties
     var storage: StorageType = Storage()
     
@@ -28,4 +30,14 @@ class AssemblyModule: AssemblyModuleType {
         
         return view
     }
+    
+    func createDeatilModule(router: UsersRouter, user: User?) -> UIViewController {
+        let view = DetailViewController()
+        let presenter = DetailPresenter(view: view, storage: storage, router: router, user: user)
+        
+        view.presenter = presenter
+        
+        return view
+    }
+   
 }

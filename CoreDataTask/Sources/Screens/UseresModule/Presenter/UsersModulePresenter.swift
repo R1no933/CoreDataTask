@@ -25,7 +25,7 @@ class UserPresenter: UsersPresenterType {
     //Properties
     weak var view: UsersViewType?
     private let storage: StorageType
-    private let router: UsersRouter
+    private let router: UsersRouter?
     var users: [User]?
     
     //Inits
@@ -52,6 +52,6 @@ class UserPresenter: UsersPresenterType {
     }
     
     func userSelected(user: User?) {
-        router.showDetailViewController(user: user)
+        router?.showDetailViewController(user: user)
     }
 }

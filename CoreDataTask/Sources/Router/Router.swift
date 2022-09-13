@@ -43,7 +43,11 @@ class Router: UsersRouter {
     }
     
     func showDetailViewController(user: User?) {
-        #warning("Detail vc")
+        guard let navigationController = navigationController,
+              let detailViewController = assemblyModule?.createDeatilModule(router: self, user: user)
+        else { return }
+        
+        navigationController.pushViewController(detailViewController, animated: true)
     }
     
     func popToRoot() {
