@@ -47,7 +47,7 @@ class UsersView: UIView {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .systemBackground
         tableView.layer.cornerRadius = 10
         
         return tableView
