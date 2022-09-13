@@ -97,11 +97,11 @@ class DetailView: UIView {
             avatarButton.heightAnchor.constraint(equalToConstant: Metrics.avatarSize),
             avatarButton.widthAnchor.constraint(equalToConstant: Metrics.avatarSize),
             
-            userNameTextField.topAnchor.constraint(equalTo: avatarButton.bottomAnchor, constant: Metrics.fieldsPadding),
+            userNameTextField.topAnchor.constraint(equalTo: avatarButton.bottomAnchor, constant: Metrics.fieldsTop),
             
-            birthTextField.topAnchor.constraint(equalTo: userNameTextField.bottomAnchor, constant: Metrics.fieldsPadding),
+            birthTextField.topAnchor.constraint(equalTo: userNameTextField.bottomAnchor, constant: Metrics.fieldsTop),
             
-            genderTextField.topAnchor.constraint(equalTo: birthTextField.bottomAnchor, constant: Metrics.fieldsPadding)
+            genderTextField.topAnchor.constraint(equalTo: birthTextField.bottomAnchor, constant: Metrics.fieldsTop)
         ])
         
         backgroundColor = .systemBackground
@@ -116,9 +116,10 @@ class DetailView: UIView {
 
 extension DetailView {
     enum Metrics {
-        static let avatarTop: CGFloat = 40
+        static let avatarTop: CGFloat = 20
         static let avatarSize: CGFloat = 200
         
+        static let fieldsTop: CGFloat = 5
         static let fieldsPadding: CGFloat = 30
         static let fieldsHeight: CGFloat = 60
     }

@@ -102,6 +102,6 @@ extension UsersView {
     enum Metrics {
         static let padding: CGFloat = 20
         static let height: CGFloat = 60
-        static let tableViewBottom: CGFloat = 200
+        static let tableViewBottom: CGFloat = 50
     }
 }
